@@ -11,6 +11,7 @@ const LastInvoiceCard = () => {
                 width: "100%",
                 display: "flex",
                 flexDirection: "column",
+                borderTop: "3px solid #fab15a",
             }}
         >
             {/* Edit Title */}
@@ -19,7 +20,7 @@ const LastInvoiceCard = () => {
                 fontWeight="bold"
                 sx={{
                     mb: 2,
-                    borderBottom: "2px solid #4f7184",
+                    borderBottom: "1px solid #dfdfdf",
                     paddingBottom: "8px",
                     color: "#4f7184",
                 }}

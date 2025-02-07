@@ -11,6 +11,7 @@ const BalanceInformationCard = () => {
                 position: "relative",
                 display: "flex",
                 flexDirection: "column", // Stack elements vertically
+                borderTop: "3px solid #fab15a",
             }}
         >
             <Typography
@@ -18,7 +19,7 @@ const BalanceInformationCard = () => {
                 fontWeight="bold"
                 sx={{
                     mb: 3,
-                    borderBottom: "2px solid #4f7184",
+                    borderBottom: "1px solid #dfdfdf",
                     paddingBottom: "10px",
                     color: "#4f7184",
                     fontSize: "1.2rem",

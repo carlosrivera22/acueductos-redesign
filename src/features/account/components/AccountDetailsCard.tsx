@@ -1,5 +1,5 @@
 import { Edit } from "@mui/icons-material"
-import { Stack, Box, IconButton, Typography, Divider, Chip, Button } from "@mui/material"
+import { Stack, Box, IconButton, Typography, Divider } from "@mui/material"
 
 const AccountDetailsCard = () => {
     return (
@@ -12,6 +12,7 @@ const AccountDetailsCard = () => {
                     borderRadius: "16px",
                     width: "100%",
                     position: "relative",
+                    borderTop: "3px solid #fab15a",
                 }}
             >
                 {/* Edit Button */}
@@ -36,7 +37,7 @@ const AccountDetailsCard = () => {
                     fontWeight="bold"
                     sx={{
                         mb: 3,
-                        borderBottom: "2px solid #4f7184",
+                        borderBottom: "2px solid #dfdfdf",
                         paddingBottom: "16px",
                         color: "#4f7184",
                     }}
