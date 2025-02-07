@@ -26,6 +26,8 @@ const Account = () => {
                             borderRadius: "12px",
                             width: "100%", // Full width
                             position: "relative", // For positioning the delete button
+                            borderColor: "#fab15a", // Set border color
+                            borderTop: "3px solid #fab15a", // Correctly applying the border top with color and width
                         }}
                     >
                         <Typography variant="h6" fontWeight="bold">
@@ -150,17 +152,15 @@ const Account = () => {
                         {/* Delete Button on Right */}
                         <Button
                             startIcon={<DeleteOutline />}
-                            size="medium"
+                            size="small"
+                            variant="outlined"
                             sx={{
                                 fontSize: 11,
                                 position: "absolute",
                                 top: "20px",
                                 right: "20px",
-                                backgroundColor: "#d32f2f",
-                                color: "white",
-                                '&:hover': {
-                                    backgroundColor: "#d32f2f",
-                                },
+                                color: "#d32f2f",
+                                borderColor: "#d32f2f",
                             }}
                         >
                             Eliminar cuenta
@@ -184,6 +184,7 @@ const Account = () => {
                             padding: "24px",
                             borderRadius: "12px",
                             width: { xs: "100%", sm: "48%" }, // 2 cards per row on medium screens
+                            borderTop: "2px solid #fab15a",
                         }}
                     >
                         <Typography variant="h6" fontWeight="bold">
@@ -213,6 +214,7 @@ const Account = () => {
                             padding: "24px",
                             borderRadius: "12px",
                             width: { xs: "100%", sm: "48%" }, // 2 cards per row on medium screens
+                            borderTop: "2px solid #fab15a",
                         }}
                     >
                         <Typography variant="h6" fontWeight="bold">
@@ -288,6 +290,7 @@ const Account = () => {
                         backgroundColor: "white",
                         padding: "24px",
                         borderRadius: "12px",
+                        borderTop: "1px solid #fab15a",
                     }}
                 >
                     <Typography variant="h6" fontWeight="bold">

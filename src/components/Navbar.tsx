@@ -3,7 +3,7 @@ import Image from "next/image";
 import logo from "../assets/aaa-logo.png"
 const Navbar = () => {
     return (
-        <AppBar position="sticky" sx={{ backgroundColor: "#4f7184" }}>
+        <AppBar position="sticky" sx={{ backgroundColor: "#4f7184", boxShadow: 0 }}>
             <Toolbar sx={{ justifyContent: "space-between", paddingX: 4 }}>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
                     <Image src={logo} alt="Logo" width={200} height={75} />
