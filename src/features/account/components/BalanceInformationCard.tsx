@@ -46,13 +46,13 @@ const BalanceInformationCard = () => {
             {/* Balance Information */}
             <Stack direction="row" spacing={3} justifyContent="space-between" sx={{ mb: 3 }}>
                 <Box sx={{ flex: 1 }}>
-                    <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500", mb: 1 }}>
+                    <Typography variant="body1" sx={{ fontWeight: "500", mb: 1 }}>
                         Cargos Vencidos: <span style={{ fontWeight: "bold" }}>$0</span>
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500", mb: 1 }}>
+                    <Typography variant="body1" sx={{ fontWeight: "500", mb: 1 }}>
                         Cargos Corrientes: <span style={{ fontWeight: "bold" }}>$0</span>
                     </Typography>
-                    <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500" }}>
+                    <Typography variant="body1" sx={{ fontWeight: "500" }}>
                         Cargos Objetados: <span style={{ fontWeight: "bold" }}>$0</span>
                     </Typography>
                 </Box>
