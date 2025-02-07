@@ -247,13 +247,13 @@ const AccountDetails = () => {
                         variant="contained"
                         sx={{
                             backgroundColor: "#4f7184",
-                            color: "white",
-                            marginTop: "20px",
-                            padding: "12px 24px",
-                            fontSize: "14px",
-                            boxShadow: 3,
-                            borderRadius: "30px",
                             "&:hover": { backgroundColor: "#3d5b69" },
+                            padding: "10px 20px",
+                            fontWeight: "bold",
+                            textTransform: "none",
+                            borderRadius: "30px",
+                            alignSelf: "flex-start",
+                            boxShadow: 3,
                         }}
                     >
                         Verificar pagos pendientes
