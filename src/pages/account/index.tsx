@@ -24,7 +24,6 @@ const Account = () => {
                             backgroundColor: "white",
                             padding: "24px",
                             borderRadius: "12px",
-                            boxShadow: 3,
                             width: "100%", // Full width
                             position: "relative", // For positioning the delete button
                         }}
@@ -184,7 +183,6 @@ const Account = () => {
                             backgroundColor: "white",
                             padding: "24px",
                             borderRadius: "12px",
-                            boxShadow: 3,
                             width: { xs: "100%", sm: "48%" }, // 2 cards per row on medium screens
                         }}
                     >
@@ -214,7 +212,6 @@ const Account = () => {
                             backgroundColor: "white",
                             padding: "24px",
                             borderRadius: "12px",
-                            boxShadow: 3,
                             width: { xs: "100%", sm: "48%" }, // 2 cards per row on medium screens
                         }}
                     >
@@ -291,7 +288,6 @@ const Account = () => {
                         backgroundColor: "white",
                         padding: "24px",
                         borderRadius: "12px",
-                        boxShadow: 3,
                     }}
                 >
                     <Typography variant="h6" fontWeight="bold">

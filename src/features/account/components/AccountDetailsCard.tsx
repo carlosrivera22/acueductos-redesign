@@ -10,7 +10,6 @@ const AccountDetailsCard = () => {
                     backgroundColor: "white",
                     padding: "24px",
                     borderRadius: "16px",
-                    boxShadow: 3,
                     width: "100%",
                     position: "relative",
                 }}
@@ -47,13 +46,13 @@ const AccountDetailsCard = () => {
 
                 {/* Account Information */}
                 <Stack spacing={2}>
-                    <Typography component="div" sx={{ fontWeight: 500, color: "#333" }}>
+                    <Typography variant="body2" sx={{ fontWeight: 500, color: "#333" }}>
                         <strong>Nombre de cliente:</strong> Carlos Geronimo Rivera Velazquez
                     </Typography>
-                    <Typography component="div" sx={{ fontWeight: 500, color: "#333" }}>
+                    <Typography variant="body2" sx={{ fontWeight: 500, color: "#333" }}>
                         <strong>Descripción de la Cuenta:</strong> Apartamento Hogar
                     </Typography>
-                    <Typography component="div" sx={{ fontWeight: 500, color: "#333" }}>
+                    <Typography variant="body2" sx={{ fontWeight: 500, color: "#333" }}>
                         <strong>Número de cuenta:</strong> 000230518144
                     </Typography>
 

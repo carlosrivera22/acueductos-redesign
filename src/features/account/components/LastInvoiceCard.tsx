@@ -7,7 +7,6 @@ const LastInvoiceCard = () => {
                 backgroundColor: "white",
                 padding: "24px",
                 borderRadius: "16px",
-                boxShadow: 3,
                 position: "relative",
                 width: "100%",
                 display: "flex",
@@ -51,12 +50,12 @@ const LastInvoiceCard = () => {
             <Stack spacing={2} sx={{ flex: 1 }}>
                 {/* Date Information */}
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <Typography variant="body1" sx={{ fontWeight: 500, color: "#333" }}>
+                    <Typography variant="body2" sx={{ fontWeight: 500, color: "#333" }}>
                         <strong>Fecha:</strong> 2025-01-21
                     </Typography>
                 </Box>
                 <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                    <Typography variant="body1" sx={{ fontWeight: 500, color: "#333" }}>
+                    <Typography variant="body2" sx={{ fontWeight: 500, color: "#333" }}>
                         <strong>Fecha de Vencimiento:</strong> 2025-02-11
                     </Typography>
                 </Box>
