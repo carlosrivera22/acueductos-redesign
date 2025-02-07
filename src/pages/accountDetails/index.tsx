@@ -13,10 +13,10 @@ const AccountDetails = () => {
                     sx={{
                         backgroundColor: "white",
                         padding: "24px",
-                        borderRadius: "12px",
+                        borderRadius: "16px",
                         boxShadow: 3,
                         width: "100%",
-                        position: "relative", // For absolute positioning of the edit button
+                        position: "relative",
                     }}
                 >
                     {/* Edit Button */}
@@ -25,10 +25,10 @@ const AccountDetails = () => {
                             position: "absolute",
                             top: 16,
                             right: 16,
-                            color: "#ffffff", // White for the button icon
+                            color: "#ffffff",
                             backgroundColor: "#4f7184",
                             '&:hover': {
-                                backgroundColor: "#3d5b69", // Optional hover effect
+                                backgroundColor: "#3d5b69",
                             },
                         }}
                     >
@@ -41,34 +41,26 @@ const AccountDetails = () => {
                         fontWeight="bold"
                         sx={{
                             mb: 3,
-                            borderBottom: "0.5px solid #4f7184", // Bottom border for emphasis
-                            paddingBottom: "20px",
-                            color: "#4f7184", // Color for the title
+                            borderBottom: "2px solid #4f7184",
+                            paddingBottom: "16px",
+                            color: "#4f7184",
                         }}
                     >
                         Detalles de la Cuenta
                     </Typography>
 
                     {/* Account Information */}
-                    <Stack direction="row" justifyContent="space-between" alignItems="center" spacing={2}>
-                        <Stack spacing={2}>
-                            <Typography component={"div"} sx={{ fontWeight: 500 }}>
-                                Número de cuenta:{" "}
-                                <Chip label="000230518144" sx={{ borderRadius: "4px", color: "#4f7184", fontWeight: "bold" }} />
-                            </Typography>
-                            <Typography component={"div"} sx={{ fontWeight: 500 }}>
-                                Nombre de cliente:{" "}
-                                <Chip label="Carlos Geronimo Rivera Velazquez" sx={{ borderRadius: "4px", color: "#4f7184", fontWeight: "bold" }} />
-                            </Typography>
-                        </Stack>
+                    <Stack spacing={2}>
+                        <Typography component="div" sx={{ fontWeight: 500, color: "#333" }}>
+                            <strong>Número de cuenta:</strong> 000230518144
+                        </Typography>
+                        <Typography component="div" sx={{ fontWeight: 500, color: "#333" }}>
+                            <strong>Nombre de cliente:</strong> Carlos Geronimo Rivera Velazquez
+                        </Typography>
                     </Stack>
 
-                    <Typography mt={2} component={"div"}>
-                        Descripción de la Cuenta: <Chip label="Apartamento Hogar" sx={{
-                            borderRadius: "4px",
-                            color: "#4f7184",
-                            fontWeight: "bold",
-                        }} />
+                    <Typography mt={2} component="div" sx={{ fontWeight: 500, color: "#333" }}>
+                        <strong>Descripción de la Cuenta:</strong> Apartamento Hogar
                     </Typography>
 
                     <Divider sx={{ my: 2 }} />
@@ -78,7 +70,7 @@ const AccountDetails = () => {
                         <Typography variant="h6" fontWeight="bold" sx={{ color: "#4f7184" }}>
                             Dirección física del servicio
                         </Typography>
-                        <Typography variant="body2" mt={1}>
+                        <Typography variant="body2" mt={1} sx={{ color: "#555" }}>
                             Cond Atrium Plaza
                             <br />
                             230 Ave Arterial Hostos Apt 406 E
@@ -93,7 +85,7 @@ const AccountDetails = () => {
                         <Typography variant="h6" fontWeight="bold" sx={{ color: "#4f7184" }}>
                             Dirección postal
                         </Typography>
-                        <Typography variant="body2" mt={1}>
+                        <Typography variant="body2" mt={1} sx={{ color: "#555" }}>
                             PO Box 8130
                             <br />
                             Humacao PR 00792
@@ -106,10 +98,10 @@ const AccountDetails = () => {
                     sx={{
                         backgroundColor: "white",
                         padding: "24px",
-                        borderRadius: "12px",
+                        borderRadius: "16px",
                         boxShadow: 3,
                         width: "100%",
-                        position: "relative",  // Needed for absolute positioning
+                        position: "relative",
                     }}
                 >
                     {/* Edit Title */}
@@ -118,7 +110,7 @@ const AccountDetails = () => {
                         fontWeight="bold"
                         sx={{
                             mb: 2,
-                            borderBottom: "0.5px solid #4f7184",
+                            borderBottom: "2px solid #4f7184",
                             paddingBottom: "8px",
                             color: "#4f7184",
                         }}
@@ -126,7 +118,7 @@ const AccountDetails = () => {
                         Última Factura
                     </Typography>
 
-                    {/* Invoice Number at the top-right */}
+                    {/* Invoice Number */}
                     <Typography
                         variant="body1"
                         sx={{
@@ -142,7 +134,7 @@ const AccountDetails = () => {
                         <Chip
                             label="204021278085"
                             sx={{
-                                borderRadius: "4px",
+                                borderRadius: "8px",
                                 color: "#4f7184",
                                 fontWeight: "bold",
                                 marginLeft: "8px",
@@ -150,34 +142,19 @@ const AccountDetails = () => {
                         />
                     </Typography>
 
-                    <Stack direction="row" spacing={3} alignItems="center" justifyContent="space-between">
-                        {/* Information Section */}
-                        <Stack spacing={2} sx={{ flex: 1 }}>
-                            <Typography variant="body1" component={"div"}>
-                                Fecha:
-                                <Chip
-                                    label="2025-01-21"
-                                    sx={{
-                                        borderRadius: "4px",
-                                        color: "#4f7184",
-                                        fontWeight: "bold",
-                                        marginLeft: "5px",
-                                    }}
-                                />
+                    {/* Information Section */}
+                    <Stack spacing={2} sx={{ flex: 1 }}>
+                        {/* Date Information */}
+                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <Typography variant="body1" sx={{ fontWeight: 500, color: "#333" }}>
+                                <strong>Fecha:</strong> 2025-01-21
                             </Typography>
-                            <Typography variant="body1" component={"div"}>
-                                Fecha de Vencimiento:
-                                <Chip
-                                    label="2025-02-11"
-                                    sx={{
-                                        borderRadius: "4px",
-                                        color: "#4f7184",
-                                        fontWeight: "bold",
-                                        marginLeft: "5px",
-                                    }}
-                                />
+                        </Box>
+                        <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                            <Typography variant="body1" sx={{ fontWeight: 500, color: "#333" }}>
+                                <strong>Fecha de Vencimiento:</strong> 2025-02-11
                             </Typography>
-                        </Stack>
+                        </Box>
 
                         {/* Small Button */}
                         <Button
@@ -185,10 +162,12 @@ const AccountDetails = () => {
                             sx={{
                                 backgroundColor: "#4f7184",
                                 "&:hover": { backgroundColor: "#3d5b69" },
-                                padding: "6px 12px",  // Reduced padding for a smaller button
+                                padding: "10px 20px",
                                 fontWeight: "bold",
                                 textTransform: "none",
-                                alignSelf: "flex-start", // Align the button to the top
+                                borderRadius: "30px",
+                                alignSelf: "flex-start",
+                                boxShadow: 3,
                             }}
                         >
                             Ver historial de facturas
@@ -201,14 +180,10 @@ const AccountDetails = () => {
                     sx={{
                         backgroundColor: "white",
                         padding: "24px",
-                        borderRadius: "16px",  // Slightly rounded corners for a modern look
-                        boxShadow: 4,  // Stronger shadow for a more elevated look
+                        borderRadius: "16px",
+                        boxShadow: 4,
                         width: "100%",
-                        transition: "all 0.3s ease", // Smooth transition for hover effect
-                        position: "relative", // For positioning the balance
-                        '&:hover': {
-                            boxShadow: 8,  // Deep shadow on hover for a more interactive feel
-                        },
+                        position: "relative",
                     }}
                 >
                     <Typography
@@ -219,30 +194,34 @@ const AccountDetails = () => {
                             borderBottom: "2px solid #4f7184",
                             paddingBottom: "10px",
                             color: "#4f7184",
-                            letterSpacing: "0.5px",  // Slightly spaced out text for elegance
+                            fontSize: "1.2rem",
                         }}
                     >
                         Información de Balance
                     </Typography>
 
                     {/* Balance Positioned Top Right */}
-                    <Typography fontWeight="bold" sx={{
-                        position: "absolute",
-                        top: 20,
-                        right: 30,
-                        color: "#388e3c",
-                        fontSize: "1.2rem",
-                        fontWeight: "700"
-                    }}>
+                    <Typography
+                        fontWeight="bold"
+                        sx={{
+                            position: "absolute",
+                            top: 20,
+                            right: 30,
+                            color: "#388e3c",
+                            fontSize: "1.4rem",
+                            fontWeight: "700",
+                        }}
+                    >
                         Balance: <span>$0</span>
                     </Typography>
 
+                    {/* Balance Information */}
                     <Stack direction="row" spacing={3} justifyContent="space-between" sx={{ mb: 3 }}>
                         <Box sx={{ flex: 1 }}>
-                            <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500", marginBottom: "8px" }}>
+                            <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500", mb: 1 }}>
                                 Cargos vencidos: <span style={{ fontWeight: "bold" }}>$0</span>
                             </Typography>
-                            <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500", marginBottom: "8px" }}>
+                            <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500", mb: 1 }}>
                                 Cargos Corrientes: <span style={{ fontWeight: "bold" }}>$0</span>
                             </Typography>
                             <Typography variant="body1" sx={{ color: "#4f7184", fontWeight: "500" }}>
@@ -253,6 +232,7 @@ const AccountDetails = () => {
 
                     <Divider sx={{ my: 2, backgroundColor: "#dcdcdc" }} />
 
+                    {/* Additional Information */}
                     <Stack sx={{ mb: 3 }}>
                         <Typography variant="h6" fontWeight="bold" sx={{ color: "#4f7184" }}>
                             Información Adicional
@@ -270,17 +250,13 @@ const AccountDetails = () => {
                             color: "white",
                             marginTop: "20px",
                             padding: "12px 24px",
-                            fontSize: "12px",
-                            borderRadius: "30px",  // Rounded button for modern style
-                            '&:hover': {
-                                backgroundColor: "#2c6e29",
-                                transform: "scale(1.05)",  // Slight scale effect on hover
-                            },
-                            transition: "transform 0.3s ease", // Smooth hover transition
-                            fontWeight: "bold"
+                            fontSize: "14px",
+                            boxShadow: 3,
+                            borderRadius: "30px",
+                            "&:hover": { backgroundColor: "#3d5b69" },
                         }}
                     >
-                        Verificar Balance
+                        Verificar pagos pendientes
                     </Button>
                 </Box>
             </Stack>
