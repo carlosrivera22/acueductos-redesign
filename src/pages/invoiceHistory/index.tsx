@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import { Box, Stack, Typography, Button, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Divider } from "@mui/material";
+import { Box, Stack, Typography, Button, TableContainer, Paper, Table, TableHead, TableRow, TableCell, TableBody, Divider, TablePagination, Pagination } from "@mui/material";
 
 const InvoiceHistory = () => {
     const invoices = [
@@ -8,11 +8,6 @@ const InvoiceHistory = () => {
         { invoiceNumber: '203491727726', invoiceDate: '2024-11-18', dueDate: '2024-12-09', currentCharges: 29.29, totalAmount: 29.29 },
         { invoiceNumber: '203511996666', invoiceDate: '2024-10-18', dueDate: '2024-11-08', currentCharges: 29.29, totalAmount: 29.29 },
         { invoiceNumber: '204021278085', invoiceDate: '2025-01-21', dueDate: '2025-02-11', currentCharges: 29.29, totalAmount: 29.29 },
-        { invoiceNumber: '203491277779', invoiceDate: '2024-12-18', dueDate: '2025-01-08', currentCharges: 29.29, totalAmount: 29.29 },
-        { invoiceNumber: '203491727726', invoiceDate: '2024-11-18', dueDate: '2024-12-09', currentCharges: 29.29, totalAmount: 29.29 },
-        { invoiceNumber: '203511996666', invoiceDate: '2024-10-18', dueDate: '2024-11-08', currentCharges: 29.29, totalAmount: 29.29 },
-        { invoiceNumber: '203491727726', invoiceDate: '2024-11-18', dueDate: '2024-12-09', currentCharges: 29.29, totalAmount: 29.29 },
-        { invoiceNumber: '203511996666', invoiceDate: '2024-10-18', dueDate: '2024-11-08', currentCharges: 29.29, totalAmount: 29.29 },
         // Add more invoice data here
     ];
 
@@ -22,10 +17,17 @@ const InvoiceHistory = () => {
             <Box sx={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', padding: 4, backgroundColor: '#f4f6f8', width: '100%' }}>
                 {/* Header */}
                 <Stack direction="row" justifyContent="space-between" alignItems="center" mb={4}>
-                    <Typography variant="h4" fontWeight="bold" color="text.primary">
+                    <Typography variant="h4" fontWeight="bold">
                         Historial de Facturas
                     </Typography>
-                    <Button variant="outlined" color="primary" sx={{ borderRadius: '8px' }}>Mis Cuentas</Button>
+                    <Button variant="outlined" sx={{
+                        textTransform: "none",
+                        borderColor: "#4f7184",
+                        '&:hover': {
+                            borderColor: "#3d5b69",
+                        },
+                        color: "#4f7184"
+                    }}>Mis Cuentas</Button>
                 </Stack>
 
                 <Stack direction="row" spacing={4} justifyContent="space-between" width="100%">
@@ -52,13 +54,38 @@ const InvoiceHistory = () => {
                                             <TableCell>{invoice.currentCharges}</TableCell>
                                             <TableCell>{invoice.totalAmount}</TableCell>
                                             <TableCell>
-                                                <Button variant="outlined" color="primary" sx={{ borderRadius: '8px' }}>Ver</Button>
+                                                <Button variant="outlined" sx={{
+                                                    textTransform: "none",
+                                                    borderColor: "#4f7184",
+                                                    '&:hover': {
+                                                        borderColor: "#3d5b69",
+                                                    },
+                                                    color: "#4f7184"
+                                                }}>Ver</Button>
                                             </TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
                             </Table>
                         </TableContainer>
+                        <Box sx={{ display: 'flex', justifyContent: 'center', padding: 2 }}>
+                            <Pagination
+                                count={5}
+                                color="primary"
+                                sx={{
+                                    '& .MuiPaginationItem-root': {
+                                        color: '#4f7184', // Set the custom color for the pagination items
+                                    },
+                                    '& .MuiPaginationItem-page.Mui-selected': {
+                                        backgroundColor: '#4f7184', // Set the selected page's background color
+                                        color: 'white', // Set text color for the selected page
+                                    },
+                                    '& .MuiPaginationItem-ellipsis': {
+                                        color: '#4f7184', // Change color of ellipsis (if any)
+                                    },
+                                }}
+                            />
+                        </Box>
                     </Box>
 
                     {/* Sidebar with Subscription Information */}
