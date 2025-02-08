@@ -31,7 +31,7 @@ const InvoiceHistory = () => {
                 <Stack direction="row" spacing={4} justifyContent="space-between" width="100%">
                     {/* Invoice Table */}
                     <Box sx={{ flexGrow: 1 }}>
-                        <TableContainer component={Paper} sx={{ borderRadius: '8px', boxShadow: 0 }}>
+                        <TableContainer component={Paper} sx={{ borderRadius: '8px', boxShadow: 0, borderTop: "4px solid #fab15a" }}>
                             <Table>
                                 <TableHead>
                                     <TableRow>

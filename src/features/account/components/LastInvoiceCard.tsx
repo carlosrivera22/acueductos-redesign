@@ -1,6 +1,7 @@
 import { Box, Typography, Chip, Stack, Button } from "@mui/material";
-
+import { useRouter } from "next/router";
 const LastInvoiceCard = () => {
+    const router = useRouter();
     return (
         <Box
             sx={{
@@ -76,6 +77,7 @@ const LastInvoiceCard = () => {
                     boxShadow: 3,
                     marginTop: "auto", // This ensures the button is pushed to the bottom
                 }}
+                onClick={() => router.push("/invoiceHistory")}
             >
                 Ver historial de facturas
             </Button>

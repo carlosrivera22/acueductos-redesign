@@ -1,7 +1,9 @@
 import { AppBar, Toolbar, Box, Typography, Stack, Button } from "@mui/material"
 import Image from "next/image";
 import logo from "../assets/aaa-logo.png"
+import { useRouter } from "next/router";
 const Navbar = () => {
+    const router = useRouter();
     return (
         <AppBar position="sticky" sx={{ backgroundColor: "#4f7184", boxShadow: 0 }}>
             <Toolbar sx={{ justifyContent: "space-between", paddingX: 4 }}>
@@ -12,7 +14,7 @@ const Navbar = () => {
                     </Typography>
                 </Box>
                 <Stack direction="row" spacing={3}>
-                    <Button color="inherit" sx={{ textTransform: "none" }}>
+                    <Button color="inherit" sx={{ textTransform: "none" }} onClick={() => router.push("/account")}>
                         Mis Cuentas
                     </Button>
                     <Button color="inherit" sx={{ textTransform: "none" }}>

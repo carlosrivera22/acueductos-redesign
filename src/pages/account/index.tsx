@@ -1,8 +1,9 @@
 import { Typography, Box, Button, Stack } from "@mui/material";
 import { YouTube, Instagram, Facebook, Description, Receipt, Sms, History, Payment, Assessment, DeleteOutline } from "@mui/icons-material"; // Material UI icons
 import Navbar from "@/components/Navbar";
-
+import { useRouter } from "next/router";
 const Account = () => {
+    const router = useRouter();
     return (
         <>
             {/* Navbar */}
@@ -43,7 +44,7 @@ const Account = () => {
                                 variant="h6"
                                 sx={{
                                     fontWeight: "bold",
-                                    color: "#388e3c", // Green color for balance
+                                    color: "#4f7184",
                                     fontSize: "1rem", // Larger font size
                                 }}
                             >
@@ -72,8 +73,9 @@ const Account = () => {
                                     color: "#4f7184"
                                 }}
                                 startIcon={<Description />}
+                                onClick={() => router.push("/accountDetails")}
                             >
-                                Detalle de la cuenta
+                                Detalles de la cuenta
                             </Button>
                             <Button
                                 variant="outlined"
