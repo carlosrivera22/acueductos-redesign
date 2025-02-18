@@ -34,7 +34,7 @@ const Account = () => {
                         }}
                     >
                         <Typography variant="h5" fontWeight="bold">
-                            Cuenta: #000230518144
+                            Cuenta: #0001234567
                         </Typography>
                         <Stack justifyContent="space-between">
 
