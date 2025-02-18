@@ -54,7 +54,7 @@ const AccountDetailsCard = () => {
                         <strong>Descripción de la Cuenta:</strong> Apartamento Hogar
                     </Typography>
                     <Typography variant="body2" sx={{ fontWeight: 500, color: "#333" }}>
-                        <strong>Número de cuenta:</strong> 000230518144
+                        <strong>Número de cuenta:</strong> 0001234567
                     </Typography>
 
                 </Stack>

@@ -2,6 +2,8 @@ import { Typography, Box, Button, Stack } from "@mui/material";
 import { YouTube, Instagram, Facebook, Description, Receipt, Sms, History, Payment, Assessment, DeleteOutline } from "@mui/icons-material"; // Material UI icons
 import Navbar from "@/components/Navbar";
 import { useRouter } from "next/router";
+import CreditCardIcon from '@mui/icons-material/CreditCard';
+
 const Account = () => {
     const router = useRouter();
     return (
@@ -31,25 +33,43 @@ const Account = () => {
                             borderTop: "3px solid #fab15a", // Correctly applying the border top with color and width
                         }}
                     >
-                        <Typography variant="h6" fontWeight="bold">
-                            Detalles de la Cuenta
+                        <Typography variant="h5" fontWeight="bold">
+                            Cuenta: #000230518144
                         </Typography>
-                        <Stack direction="row" justifyContent="space-between" mt={2}>
-                            <Typography variant="body1" sx={{ fontWeight: "500" }}>
-                                Cuenta: #000230518144
-                            </Typography>
+                        <Stack justifyContent="space-between">
 
                             {/* Balance with styling improvements */}
-                            <Typography
-                                variant="h6"
-                                sx={{
-                                    fontWeight: "bold",
-                                    color: "#4f7184",
-                                    fontSize: "1rem", // Larger font size
-                                }}
-                            >
-                                Balance: $0.00
-                            </Typography>
+                            <Stack mt={3} gap={2} mb={2}>
+                                <Typography
+                                    variant="h6"
+                                    sx={{
+                                        fontWeight: "bold",
+                                        color: "#4f7184",
+                                        fontSize: "1rem", // Larger font size
+                                    }}
+                                >
+                                    Balance: $26.70
+                                </Typography>
+                                <Button
+                                    variant="contained"
+                                    size="small"
+                                    sx={{
+                                        textTransform: "none",
+                                        borderColor: "#4f7184",
+                                        '&:hover': {
+                                            borderColor: "#3d5b69",
+                                            boxShadow: 0,
+                                        },
+                                        backgroundColor: "#4f7184",
+                                        width: 200,
+                                        boxShadow: 0,
+                                    }}
+                                    startIcon={<CreditCardIcon />}
+                                    onClick={() => router.push("/accountDetails")}
+                                >
+                                    Pagar
+                                </Button>
+                            </Stack>
                         </Stack>
                         <Typography variant="body2" mt={1}>
                             Descripción de la Cuenta: Apartamento Hogar
@@ -61,7 +81,7 @@ const Account = () => {
                         </Typography>
 
                         {/* Button rows */}
-                        <Stack direction="row" spacing={2} mt={2}>
+                        <Stack direction="row" spacing={2}>
                             <Button
                                 variant="outlined"
                                 sx={{
@@ -189,6 +209,11 @@ const Account = () => {
                             borderTop: "2px solid #fab15a",
                         }}
                     >
+                        <Stack mb={2}>
+                            <Typography variant="h5" fontWeight="bold">
+                                Nuestras Oficinas
+                            </Typography>
+                        </Stack>
                         <Typography variant="h6" fontWeight="bold">
                             Dirección Física
                         </Typography>
